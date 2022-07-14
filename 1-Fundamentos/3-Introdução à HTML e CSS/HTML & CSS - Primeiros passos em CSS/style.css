@@ -1,0 +1,25 @@
+h1 {
+    font-family: sans-serif;
+}
+p {
+    font-weight: 600;
+    font-size: 3em;
+}
+body {
+    background-color: aqua;
+    font-size: 16px;
+    font-style: oblique;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: double;
+}
+#yellow {
+    background-color: yellow;
+}
+#red {
+    background-color: red;
+}
+#brow {
+    background-color: brown;
+}
+
