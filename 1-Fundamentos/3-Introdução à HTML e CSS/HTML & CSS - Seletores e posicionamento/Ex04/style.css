@@ -1,9 +1,9 @@
 .listas{
     background-color: yellow;
 }
-li:nth-child(even) {
+ol li:nth-child(even) {
     color: green;
 }
-li:nth-of-type(odd) {
+ol li:nth-of-type(odd) {
     text-transform: uppercase;
 }
