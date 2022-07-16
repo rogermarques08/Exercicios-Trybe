@@ -1,34 +1,37 @@
-.listas{
-    background-color: yellow;
+.listas {
+  background-color: yellow;
 }
 
 ol li:nth-child(even) {
-    color: green;
+  color: green;
 }
 
 ol li:nth-of-type(odd) {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .header {
-    color: red;
+  color: red;
 }
 
-.height{
-    height: 40px;
-    border: 1px solid black;
-
+.height {
+  height: 40px;
+  border: 1px solid black;
 }
 
 li {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-.languages li:nth-child(-n+3) {
-    color: blue;
+.languages li:nth-child(-n + 3) {
+  color: blue;
 }
 
-.pink{
-    background-color: pink;
+.pink {
+  background-color: pink;
 }
 
+.aliados li:hover {
+  background-color: aquamarine;
+  font-weight: bold;
+}
