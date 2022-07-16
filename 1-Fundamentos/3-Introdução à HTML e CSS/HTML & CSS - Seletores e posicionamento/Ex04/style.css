@@ -1,9 +1,22 @@
 .listas{
     background-color: yellow;
 }
+
 ol li:nth-child(even) {
     color: green;
 }
+
 ol li:nth-of-type(odd) {
     text-transform: uppercase;
 }
+
+.header {
+    color: red;
+}
+
+.height{
+    height: 40px;
+    border: 1px solid black;
+
+}
+
