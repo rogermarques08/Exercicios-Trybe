@@ -1,0 +1,30 @@
+#top li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 20%;
+}
+
+h1 {
+    text-align: center;
+}
+
+#table{
+    float: right;
+    margin-top: -100px;
+    margin-right: 20px;
+}
+
+#paragrafo-1 {
+    width: 80%;
+}
+
+#primeira-parte {
+    height: 150px;
+}
+
+ .fotos{
+    width: 500px;
+    margin-left: 30%;
+}
+
+
