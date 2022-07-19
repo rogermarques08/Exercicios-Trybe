@@ -1,0 +1,45 @@
+body{
+    background-color: aquamarine;
+}
+
+#top li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 20%;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 h2 p{
+    font-family: 'Libre Baskerville', serif;
+}
+
+#table{
+    float: right;
+    margin-top: -100px;
+    margin-right: 20px;
+}
+
+#paragrafo-1 {
+    width: 80%;
+}
+
+#primeira-parte {
+    height: 150px;
+}
+
+ .fotos{
+    width: 500px;
+    margin-left: 30%;
+}
+
+#footer {
+    float: right;
+    margin-right: 80px;
+    margin-top:-100px;
+    padding: 20px;
+    width: 100px;
+    
+}
