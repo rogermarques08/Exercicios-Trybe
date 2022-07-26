@@ -114,16 +114,83 @@
 // console.log(verificaPalindrome('arara')); //true
 // console.log(verificaPalindrome('desenvolvimento')); //false
 
-function maiorIndice(numeros) {
-    let maior = numeros[0];
-    for (let index = 0; index < numeros.length; index += 1) {
-        if (numeros[index] > maior) {
-            maior = numeros[index]
-        }
-    }
-    maior = maior.length
+// Exercicio 2
 
-    return maior;
-}
+// function maiorIndice(numeros) {
+//     let maior = '';
+//     let indice = '';
+//     for (let index = 0; index < numeros.length; index += 1) {
+//         if (numeros[index] > maior) {
+//             maior = numeros[index]
+//             indice = index
+//         }
+//     }
+//     return indice;
+// }
     
-console.log(maiorIndice([2, 3, 6, 7, 10, 1]))
+// console.log(maiorIndice([2, 3, 6, 7, 10, 1]))
+
+// Exercicio 3
+
+// function menorIndice(numeros) {
+//     let menor = numeros[0];
+//     let indice = '';
+
+//     for ( let index in numeros) {
+//         if (numeros[index] < menor) {
+//             menor = numeros[index];
+//             indice = index;
+//         }
+//     }
+//     return indice;
+// }
+
+// console.log(menorIndice([2, 4, 6, 7, 10, 0, -3]))
+
+// Exercicio 4
+
+// function maiorPalavra(array) {
+//     let maior = array[0];
+//     for (let index in array) {
+//         if (array[index].length > maior.length) {
+//             maior = array[index]
+//         }
+//     }
+//     return maior;
+// }
+
+// console.log(maiorPalavra(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'])) 
+
+//Exercicio 5 -- Incompleto
+
+// function maiorRepetidor(numeros) {
+
+//     let comparador;
+//     let repetidor;
+
+//     for ( let index in numeros) {
+//         comparador = numeros[index] 
+
+//         for (let index2 in numeros) {
+//             if (comparador === numeros[index]) {
+//                 repetidor === numeros[index]
+//             }
+//         }
+//     }
+
+//     return repetidor;
+// }
+
+// console.log([2, 3, 2, 5, 8, 2, 3])
+
+// Exercicio 6
+
+function somatoria(numero) {
+    let result = 0;
+
+    for (let index = 0; index <= numero; index += 1) {
+        result = result + index
+    }
+    return result
+}
+console.log(somatoria(5))
