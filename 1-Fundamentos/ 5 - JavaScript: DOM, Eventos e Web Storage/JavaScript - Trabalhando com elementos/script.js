@@ -39,8 +39,20 @@ p()
 
 //🚀 Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
 
-// function addClassSection() {
-//     const section = document.getElementsByTagName('section')[0];
-//     section.className = 'left-content'
-// }
-// addClassSection()
+function addClassSection() {
+    const father = document.getElementsByTagName('main')[0];
+    const section = document.createElement('section')
+    section.className = 'left-content';
+    father.appendChild(section);
+}
+addClassSection()
+
+//🚀 Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+
+function addClassSection2() {
+    const father = document.getElementsByTagName('main')[0];
+    const section = document.createElement('section')
+    section.className = 'right-content';
+    father.appendChild(section)
+}
+addClassSection2()
