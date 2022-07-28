@@ -82,3 +82,16 @@ function listNumbers(){
     }
 }
 listNumbers()
+
+// 🚀 Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+
+function tagsh3(text) {
+    const father = document.getElementsByTagName('main')[0];
+
+    for (let index = 0; index < 3; index += 1){
+        let h3 = document.createElement('h3');
+        h3.innerText = text[index]
+        father.appendChild(h3)
+    }
+}
+tagsh3(['First Paragraph', 'Second Paragraph', "Tird Paragraph"])
