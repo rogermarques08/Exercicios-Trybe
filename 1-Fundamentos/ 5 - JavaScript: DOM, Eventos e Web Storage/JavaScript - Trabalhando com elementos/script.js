@@ -17,3 +17,13 @@ function main() {
     console.log(body)
 }
 main()
+
+// 🚀 Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+
+function section() {
+    const father = document.getElementsByTagName('main')[0];
+    const son = document.createElement('section');
+    son.className = 'center-content'
+    father.appendChild(son)
+}
+section()
