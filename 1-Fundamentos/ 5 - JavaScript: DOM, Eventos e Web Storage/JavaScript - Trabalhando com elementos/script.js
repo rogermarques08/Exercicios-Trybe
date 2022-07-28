@@ -36,3 +36,11 @@ function p(){
     father.appendChild(son)
 }
 p()
+
+//🚀 Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+
+// function addClassSection() {
+//     const section = document.getElementsByTagName('section')[0];
+//     section.className = 'left-content'
+// }
+// addClassSection()
