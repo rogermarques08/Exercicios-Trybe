@@ -14,7 +14,6 @@ function main() {
     const son = document.createElement('main');
     son.className = 'main-content'
     document.body.appendChild(son);
-    console.log(body)
 }
 main()
 
@@ -27,3 +26,13 @@ function section() {
     father.appendChild(son)
 }
 section()
+
+//🚀 Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+
+function p(){
+    const father = document.getElementsByTagName('section')[0];
+    const son = document.createElement('p');
+    son.innerText = 'Isso aqui é bom demais kkkkk'
+    father.appendChild(son)
+}
+p()
