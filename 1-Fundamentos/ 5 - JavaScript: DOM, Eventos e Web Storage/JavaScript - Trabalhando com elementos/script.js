@@ -56,3 +56,15 @@ function addClassSection2() {
     father.appendChild(section)
 }
 addClassSection2()
+
+//🚀 Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+
+function image() {
+    const father = document.getElementsByTagName('section')[1];
+    const image = document.createElement('img');
+    image.src = 'https://picsum.photos/200'
+    image.className = 'small-image'
+    father.appendChild(image)
+
+}
+image()
