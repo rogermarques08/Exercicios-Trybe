@@ -140,3 +140,13 @@ removeSection()
     }
     background()
 // 🚀 Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
+
+    function removeLi() {
+        let ul = document.getElementsByTagName('ul')[0];
+        let liRemove1 = document.getElementsByTagName('li')[8];
+        let liRemove2 = document.getElementsByTagName('li')[9];
+        ul.removeChild(liRemove1)
+        ul.removeChild(liRemove2)
+        
+    }
+    removeLi()
