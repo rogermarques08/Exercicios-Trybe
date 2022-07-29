@@ -39,7 +39,7 @@ function monthdays() {
     }
 }
 monthdays()
-
+// 🚀 Exercício 2:
 // Implemente uma função que crie dinamicamente um botão com o nome "Feriados".
 // Sua função deve receber um parâmetro com a string 'Feriados'
 // Adicione a este botão a ID "btn-holiday"
@@ -49,8 +49,38 @@ let string = 'Feriado'
 function creatButtom(string) {
     const buttomContainer = document.getElementsByClassName('buttons-container')[0];
     const buttom = document.createElement('button');
-    buttom.id = 'btn-holiday"'
+    buttom.id = 'btn-holiday'
     buttom.innerText = string
     buttomContainer.appendChild(buttom)
 }
 creatButtom(string)
+
+// 🚀 Exercício 3:
+// Implemente uma função que muda a cor de fundo dos dias que possuem a classe "holiday".
+// Adicione ao botão "Feriados" um evento de "click" que altere a cor de fundo dos dias que possuem a classe "holiday"
+// 👀 É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à cor inicial
+
+
+function changeColorButton() {
+    const buttom = document.getElementById('btn-holiday')
+    let onOf = true;
+
+    if (onOf) {
+        buttom.addEventListener('click', function () {
+            const classHolliday = document.querySelectorAll('.holiday');
+            for (let index in classHolliday) {
+                classHolliday[index].style.background = 'red'
+            }
+            onOf = false;
+        })
+    } else {
+        buttom.addEventListener('click', function () {
+            const classHolliday = document.querySelectorAll('.holiday');
+            for (let index in classHolliday) {
+                classHolliday[index].style.background = 'unset'
+            }
+            onOf = true;
+        })
+    }
+}
+changeColorButton()
