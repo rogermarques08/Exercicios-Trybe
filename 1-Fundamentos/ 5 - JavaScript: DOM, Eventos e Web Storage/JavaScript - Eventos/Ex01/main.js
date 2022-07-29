@@ -13,10 +13,10 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
 function classTech(evento) {
-  const li = document.querySelector('.tech');
-  li.classList.remove('tech');
-  evento.target.classList.add('tech')
-  input.value = ''
+  let li = document.querySelector('.tech');
+  li.classList.remove('tech'); 
+  evento.target.classList.add('tech');
+  evento.value = '';  
 }
 
 firstLi.addEventListener('click', classTech);
@@ -26,29 +26,41 @@ thirdLi.addEventListener('click', classTech);
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
 
-input.addEventListener('input', function(evento) {
-  const li = document.querySelector('.tech')
-  li.innerText = evento.target.value
-
+input.addEventListener('input', function (evento) {
+  let tech = document.querySelector('.tech');
+  tech.innerText = evento.target.value
 })
-
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
 
+
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
+
+
+myWebpage.addEventListener('mouseover', function colorChange() {
+  myWebpage.style.color = 'red'
+})
+myWebpage.addEventListener('mouseout', function colorChange() {
+  myWebpage.style.color = 'unset'
+
+})
+
+
+
+
 
 // Segue abaixo um exemplo do uso de event.target:
 
 
 function resetText(event) {
-  // O Event é passado como um parâmetro para a função.
-  event.target.innerText = 'Opção reiniciada';
-  // O event possui várias propriedades, porém a mais usada é o event.target,
-  // que retorna o objeto que disparou o evento.
-}
+    // O Event é passado como um parâmetro para a função.
+    event.target.innerText = 'Opção reiniciada';
+    // O event possui várias propriedades, porém a mais usada é o event.target,
+    // que retorna o objeto que disparou o evento.
+  }
 
 firstLi.addEventListener('dblclick', resetText);
 
