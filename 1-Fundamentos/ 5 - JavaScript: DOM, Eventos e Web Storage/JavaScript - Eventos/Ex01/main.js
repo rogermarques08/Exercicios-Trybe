@@ -10,20 +10,28 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // 1.2. Note que uma das caixas está um pouco acima das outras. Por que isso ocorre? A class tech aplicada ao elemento faz com que ela fique "desalinhada" em relação as outras.
 
 // 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
-
-function classTech (evento) {
-  const li = document.getElementsByClassName('tech')[0];
-  li.classList.remove('tech');
-  evento.target.classList.add('tech');
-  input.value = '';
-}
-firstLi.addEventListener('click', classTech)
-secondLi.addEventListener('click', classTech)
-thirdLi.addEventListener('click', classTech)
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
+
+function classTech(evento) {
+  const li = document.querySelector('.tech');
+  li.classList.remove('tech');
+  evento.target.classList.add('tech')
+  input.value = ''
+}
+
+firstLi.addEventListener('click', classTech);
+secondLi.addEventListener('click', classTech);
+thirdLi.addEventListener('click', classTech);
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
+
+input.addEventListener('input', function(evento) {
+  const li = document.querySelector('.tech')
+  li.innerText = evento.target.value
+
+})
+
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
