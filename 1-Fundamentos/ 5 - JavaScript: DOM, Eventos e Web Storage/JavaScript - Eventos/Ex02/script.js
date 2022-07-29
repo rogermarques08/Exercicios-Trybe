@@ -64,7 +64,6 @@ creatButtom(string)
 function changeColorButton() {
     const buttom = document.getElementById('btn-holiday')
     let onOf = true;
-
     if (onOf) {
         buttom.addEventListener('click', function () {
             const classHolliday = document.querySelectorAll('.holiday');
@@ -84,3 +83,19 @@ function changeColorButton() {
     }
 }
 changeColorButton()
+
+//🚀 Exercício 4:
+// Implemente uma função que crie dinamicamente um botão com o nome "Sexta-feira". Sua função deve receber como parâmetro a string "Sexta-feira".
+// Adicione a esse botão o ID "btn-friday";
+// Adicione esse botão como filho/filha da tag <div> com classe "buttons-container".
+
+let string2 = 'Sexta-feira'
+function creatButtom2 (string2) {
+    const buttomContainer = document.querySelector('.buttons-container');
+    const buttom = document.createElement('button');
+    buttom.id = 'btn-friday';
+    buttom.innerText = string2
+    buttomContainer.appendChild(buttom)
+}
+creatButtom2(string2)
+
