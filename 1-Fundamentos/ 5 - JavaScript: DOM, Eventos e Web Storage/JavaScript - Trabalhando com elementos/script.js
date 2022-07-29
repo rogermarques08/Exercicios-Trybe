@@ -29,7 +29,7 @@ section()
 
 //🚀 Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
 
-function p(){
+function p() {
     const father = document.getElementsByTagName('section')[0];
     const son = document.createElement('p');
     son.innerText = 'Isso aqui é bom demais kkkkk'
@@ -71,11 +71,11 @@ image()
 
 //🚀 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
 
-function listNumbers(){
+function listNumbers() {
     const father = document.getElementsByTagName('section')[2];
     const list = document.createElement('ul');
     father.appendChild(list)
-    for (let index = 1; index <= 10; index += 1){
+    for (let index = 1; index <= 10; index += 1) {
         let itens = document.createElement('li');
         itens.innerHTML = [index]
         list.appendChild(itens)
@@ -88,7 +88,7 @@ listNumbers()
 function tagsh3(text) {
     const father = document.getElementsByTagName('main')[0];
 
-    for (let index = 0; index < 3; index += 1){
+    for (let index = 0; index < 3; index += 1) {
         let h3 = document.createElement('h3');
         h3.innerText = text[index]
         father.appendChild(h3)
@@ -101,22 +101,29 @@ tagsh3(['First Paragraph', 'Second Paragraph', "Tird Paragraph"])
 
 // 🚀 Adicione a classe title na tag h1 criada;
 
-    function classTitle(){
-        const h1 = document.body.firstElementChild.nextElementSibling;
-        h1.className = 'title';
-    }
-    classTitle()
-// 🚀 Adicione a classe description nas 3 tags h3 criadas;
-    function h3Class(){
-        const h3 = document.querySelectorAll('h3');
-        for (let index in h3) {
-            h3[index].className = 'description';
-        }
-    }
-    h3Class()
+function classTitle() {
+    const h1 = document.body.firstElementChild.nextElementSibling;
+    h1.className = 'title';
+}
+classTitle()
 
+// 🚀 Adicione a classe description nas 3 tags h3 criadas;
+
+function h3Class() {
+    const h3 = document.querySelectorAll('h3');
+    for (let index in h3) {
+        h3[index].className = 'description';
+    }
+}
+h3Class()
 
 // 🚀 Remova a section criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+function removeSection() {
+    let main = document.getElementsByTagName('main')[0];
+    let sectionremove = document.getElementsByClassName('left-content')[0];
+    main.removeChild(sectionremove);
+}
+removeSection()
 // 🚀 Centralize a section criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto da section;
 // 🚀 Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
 // 🚀 Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
