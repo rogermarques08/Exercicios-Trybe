@@ -33,7 +33,7 @@ function monthdays() {
         if (decemberDaysList[index] === 24 || decemberDaysList[index] === 25 || decemberDaysList[index] === 31) {
             day.className += ' holiday'
         }
-        if (decemberDaysList[index] === 2 || decemberDaysList[index] === 11 || decemberDaysList[index] === 18 || decemberDaysList[index] === 25) {
+        if (decemberDaysList[index] === 4 || decemberDaysList[index] === 11 || decemberDaysList[index] === 18 || decemberDaysList[index] === 25) {
             day.className += ' friday'
         }
     }
@@ -99,3 +99,17 @@ function creatButtom2 (string2) {
 }
 creatButtom2(string2)
 
+// Implemente uma função que modifica o texto exibido nos dias que são Sexta-feira. Adicione ao botão "Sexta-feira" um evento de "click" e modifique o texto a ser exibido nos dias que são sextas-feiras.
+// 👀 É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial exibindo os dias.
+
+
+function friday () {
+    const friday = document.querySelectorAll('.friday');
+    const buttom = document.getElementById('btn-friday');
+    buttom.addEventListener('click', function () {
+        for (let index in friday) {
+            friday[index].innerText = 'Sextou'
+        }
+    })
+}
+friday()
