@@ -113,3 +113,16 @@ function friday () {
     })
 }
 friday()
+
+// 🚀 Exercício 7:
+// Implemente uma função que adicione uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
+
+let text = 'Cozinhar'
+function task(text) {
+    const myTasks = document.querySelector('.my-tasks');
+    let span = document.createElement('span');
+    span.innerText = text
+    myTasks.appendChild(span)
+}
+task(text)
