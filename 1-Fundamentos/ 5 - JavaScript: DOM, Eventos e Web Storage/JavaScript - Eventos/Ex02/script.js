@@ -62,25 +62,20 @@ creatButtom(string)
 
 
 function changeColorButton() {
-    const buttom = document.getElementById('btn-holiday')
-    let onOf = true;
-    if (onOf) {
-        buttom.addEventListener('click', function () {
-            const classHolliday = document.querySelectorAll('.holiday');
-            for (let index in classHolliday) {
-                classHolliday[index].style.background = 'red'
+    const buttom = document.querySelector('#btn-holiday')
+    const classHolliday = document.querySelectorAll('.holiday')
+    const newColor = 'green';
+    const backgroundColor = 'rgb(238,238,238)';
+
+    buttom.addEventListener('click', function () {
+        for (let index in classHolliday) {
+            if (classHolliday[index].style.backgroundColor === newColor) {
+                classHolliday[index].style.backgroundColor = backgroundColor;
+            } else {
+                classHolliday[index].style.backgroundColor = newColor;
             }
-            onOf = false;
-        })
-    } else {
-        buttom.addEventListener('click', function () {
-            const classHolliday = document.querySelectorAll('.holiday');
-            for (let index in classHolliday) {
-                classHolliday[index].style.background = 'unset'
-            }
-            onOf = true;
-        })
-    }
+        }
+    })
 }
 changeColorButton()
 
@@ -90,7 +85,7 @@ changeColorButton()
 // Adicione esse botão como filho/filha da tag <div> com classe "buttons-container".
 
 let string2 = 'Sexta-feira'
-function creatButtom2 (string2) {
+function creatButtom2(string2) {
     const buttomContainer = document.querySelector('.buttons-container');
     const buttom = document.createElement('button');
     buttom.id = 'btn-friday';
@@ -103,17 +98,41 @@ creatButtom2(string2)
 // 👀 É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial exibindo os dias.
 
 
-function friday () {
+function friday(unset) {
     const friday = document.querySelectorAll('.friday');
     const buttom = document.getElementById('btn-friday');
+    const text = 'Sextou'
     buttom.addEventListener('click', function () {
         for (let index in friday) {
-            friday[index].innerText = 'Sextou'
+            if (friday[index].innerHTML !== text) {
+                friday[index].innerHTML = text;
+            } else {
+                friday[index].innerHTML = unset[index];
+            }
         }
     })
 }
-friday()
+const unset = [4, 11, 18, 25]
+friday(unset)
 
+// Exercício 6
+// Implemente duas funções que criem um efeito de "zoom".Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+
+// function zoom() {
+//     const getDays = document.querySelectorAll('.day');
+//     getDays.addEventListener('mouseover', function (evento) {
+//         evento.target.style.fontSize = '40px'
+//     })
+// }
+// zoom()
+
+function dayMouseOver() {
+    let days = document.querySelector('#days');
+    days.addEventListener('mouseover', function (event) {
+        event.target.style.fontSize = '30px'; // Ele pega o evento alvo e altera o estilo de fontSize para 30px
+    });
+}
+dayMouseOver()
 // 🚀 Exercício 7:
 // Implemente uma função que adicione uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
@@ -134,7 +153,7 @@ task(text)
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
 
 let color = 'blue'
-function colorTask (color) {
+function colorTask(color) {
     const myTasks = document.querySelector('.my-tasks');
     let div = document.createElement('div');
     div.className = 'task';
