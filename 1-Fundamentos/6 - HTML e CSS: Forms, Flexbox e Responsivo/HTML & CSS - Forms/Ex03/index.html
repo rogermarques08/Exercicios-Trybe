@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TribeTrip</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https: //fonts.googleapis.com/css2? família= Fonte+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900 & display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>TrybeTrip</h1>
+    </header>
+    <main>
+        <form action="">
+            <div class="input-style">
+                <label for="input-name">Nome:</label>
+                <input type="text" name="name" placeholder="Digite seu nome aqui" id="input-name" required
+                    minlength="10" maxlength="40" autofocus />
+            </div>
+            <br />
+            <div class="input-style">
+                <label for="input-email">Email:</label>
+                <input type="email" name="email" id="input-email" placeholder="Digite seu email aqui" requided required
+                    minlength="10" maxlength="50" />
+            </div>
+            <br />
+            <div>
+                <fieldset>
+                    <legend>Local Favorito</legend>
+                    <label>
+                        <input type="radio" name="local" id="local-1" checked />
+                        <span>Cidade</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="local" id="local-2" />
+                        <span>Praia</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="local" id="local-3" />
+                        <span>Campo</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="local" id="local-4" />
+                        <span>Montanha</span>
+                    </label>
+                </fieldset>
+            </div>
+            <br />
+            <div>
+                <p>
+                    Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
+                    TrybeTrip?
+                </p>
+                <br />
+                <textarea name="sobre mim" id="sobre" cols="50" rows="15" maxlength="500"></textarea>
+            </div>
+            <br />
+            <div>
+                <span> Qual a melhor data para realizar sua viagem? </span>
+                <input type="date" required />
+            </div>
+            <br />
+            <div>
+                <label for="notifications">
+                    <input type="checkbox" name="" id="notifications" /> Gostaria de
+                    receber outras incríveis oportunidades oferecidas pela Trybe?
+                </label>
+            </div>
+            <br />
+            <div>
+                <label for="images">
+                    <input type="checkbox" name="img" id="images requided" required />
+                    Concordo que imagens das minhas férias poderão ser usadas na
+                    divulgação de concursos futuros.
+                </label>
+            </div>
+            <br />
+            <div>
+                <button type="submit" id="buttom">Enviar Formulário</button>
+            </div>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!-- O formulário deverá permitir que a pessoa usuária insira os seguintes campos:
+Nome Completo:
+Limitado entre 10 e 40 caracteres.
+E-mail:
+Limitado entre 10 e 50 caracteres.
+Destino Preferido:
+4 opções: Cidade, Campo, Praia, Montanhas.
+Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?
+Limite de 500 caracteres.
+Qual a melhor data para realizar sua viagem?
+Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+Esses serão os principais campos utilizadas nos próximos exercícios.
+Crie um botão para enviar as informações preenchidas.
+Agora vamos utilizar um pouco de javascript, para isso crie o arquivo script.js e o referencie no HTML.
+Dica: Coloque a tag <script> no final do seu body.
+Interrompa o comportamento padrão do botão submit utilizando o método preventDefault(). Nossa amiga Carol Silva nos contou um pouco sobre como fazer isso, lembra?
+Crie um botão que limpe as informações contidas nos campos; -->
