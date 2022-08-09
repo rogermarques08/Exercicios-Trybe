@@ -79,6 +79,7 @@
     flex-direction: column;
     margin: 20px;
     width: 350px;
+    align-self: center;
   }
   
   .aside-container h3, h4 {
