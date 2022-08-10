@@ -73,3 +73,9 @@ body {
       display: block;
   }
 }
+
+@media screen and (min-width:600px) and (max-width:1000px) {
+    .segunda {
+        display: block;
+    }
+  }
