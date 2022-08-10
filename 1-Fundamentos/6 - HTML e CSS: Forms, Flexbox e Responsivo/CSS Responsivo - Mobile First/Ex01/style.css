@@ -78,4 +78,13 @@ body {
     .segunda {
         display: block;
     }
-  }
+}
+
+.terceira {
+    display: block;
+}
+@media screen and (min-width:650px) and (max-width:950px) {
+    .terceira {
+        display: none;
+    }
+}
