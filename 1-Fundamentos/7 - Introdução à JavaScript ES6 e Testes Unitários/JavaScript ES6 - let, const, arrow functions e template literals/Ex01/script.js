@@ -29,4 +29,39 @@ const sortOddsAndEvens = (array) => {
     return numbers;
 };
 
-console.log(`Os números ${sortOddsAndEvens(oddsAndEvens)} se encontram em ordem crescernte`); // será necessário alterar essa linha 😉
+// console.log(`Os números ${sortOddsAndEvens(oddsAndEvens)} se encontram em ordem crescernte`); // será necessário alterar essa linha 😉
+
+// Crie uma função que receba um número e retorne seu fatorial.
+// Na matemática, o fatorial de um número inteiro e positivo N, representado por N!, é o produto de todos os seus antecessores até o número um. Exemplo: 4! = 4 * 3 * 2 * 1 = 24.
+// Com base nessas informações:
+// Crie a função factorial que recebe um número como parâmetro, utilizando arrow functions (Lembre-se de armazenar a função utilizando o tipo de variável correta).
+// Dentro da função crie uma variável result.
+// Crie a lógica para retornar o fatorial de N!.
+// Imprima no terminal "Esse é o fatorial resultado da função" (Lembre-se de utilizar template literals nesse momento).
+// Dica: Armazene a chamada da função em uma varíavel para imprimir no terminal seu resultado.
+// Bônus: tente fazer o mesmo exercício de forma recursiva. Spoiler: É possível resolver com uma linha usando ternary operator.
+
+const fatorial = (number) => {
+    let result = 1;
+    for (let index = 2; index < number; index += 1) {
+        result *= index
+    }
+    return result;
+}
+// console.log(`Esse é o fatorial resultado da função ${fatorial(10)}`)
+
+//Crie uma função que receba uma frase como parâmetro e retorne a maior palavra da frase.
+
+const maiorPalavra = (frase) => {
+    const word = frase.split(' ');
+    let maxLength = 0;
+    let result = '';
+    for (let index of word) {
+        if (index.length > maxLength) {
+            maxLength = index.length;
+            result = index
+        } 
+    }
+    return result;
+}
+console.log(maiorPalavra('ola meu chapa'))
