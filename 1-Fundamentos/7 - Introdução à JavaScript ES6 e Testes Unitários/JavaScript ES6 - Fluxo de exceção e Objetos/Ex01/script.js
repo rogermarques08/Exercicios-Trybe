@@ -1,5 +1,4 @@
-
-  const verifyInput = (value1, value2) => {
+const verifyInput = (value1, value2) => {
     if (!value1 || !value2) {
       throw new Error('Preencha os campos para realizar a soma');
     }
