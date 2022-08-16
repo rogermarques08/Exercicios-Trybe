@@ -64,9 +64,65 @@ const verifyPair = (obj, key, value) => {
   const getEntries = Object.entries(obj);
   let verify = false;
   for (let index in getEntries) {
-    if (getEntries[index][0] === key && getEntries[index][1] === value) verify = true;
-
-    }
-    return verify;
+    if (getEntries[index][0] === key && getEntries[index][1] === value)
+      verify = true;
+  }
+  return verify;
 };
-console.log(verifyPair(lesson2, "professor", "Carlos"));
+// console.log(verifyPair(lesson2, "professor", "Carlos"));
+
+const getNumberOfStudentsMath = (obj) => {
+  let total = 0;
+  const array = Object.keys(obj)
+  for (let index in array) {
+    if (obj[array[index]].materia === 'Matemática') {
+        total += obj[array[index]].numeroEstudantes
+    }
+  }
+  return total;
+};
+//   console.log(getNumberOfStudentsMath(allLessons));
+
+// const getInfo = (obj, name) => {
+//   const allLessons = [];
+//   let allStudent = 0;
+//   const array = Object.values(obj);
+//   for (index in array) {
+//     if (array[index].professor === name) {
+//       allLessons.push(array[index].materia);
+//       allStudent += array[index].numeroEstudantes;
+//     }
+//   }
+//   return { aulas: allLessons, estudantes: allStudent };
+// };
+
+// const createReport = (allLessons, name) => {
+//   const report = {};
+//   report.professor = name;
+//   Object.assign(report, getInfo(allLessons, name));
+//   return report;
+// };
+// console.log(createReport(allLessons, "Maria Clara"));
+
+const getReportInfos = (obj, name) => {
+    let lesson = [];
+    let students = 0;
+    const array = Object.values(obj)
+    for (let index in array) {
+        if (array[index].professor === name) {
+            lesson.push(array[index].materia)
+            students += array[index].numeroEstudantes
+        }
+    }
+    return {Aulas: lesson, Estudantes: students }
+}
+
+const report = (allLessons, name) => {
+    const result = {}
+    result.professor = name
+    Object.assign(result, getReportInfos(allLessons, name))
+    return result;
+}
+
+console.log(report(allLessons, "Maria Clara"));
+
