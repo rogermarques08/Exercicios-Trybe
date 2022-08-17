@@ -5,7 +5,7 @@
 // Teste se a mensagem de erro é "parameters must be numbers" quando realizar a chamada sum(4, "5")
 
 
-const {sum, myRemove, myFizzBuzz} = require('./script')
+const {sum, myRemove, myFizzBuzz, searchEmployee} = require('./script')
 
 // describe('1 - A função sum(a, b) retorna a soma do parâmetro a com o b', () => {
 //     it('Teste se o retorno de sum(4, 5) é 9', () => {
@@ -66,22 +66,40 @@ const {sum, myRemove, myFizzBuzz} = require('./script')
 //     })
 // })
 
-function myFizzBuzz(num) {
-    if (typeof num !== 'number') return false;
-    if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
-    if (num % 3 === 0) return 'fizz';
-    if (num % 5 === 0) return 'buzz';
-    return num;
-  }
-  
-  // implemente seus testes aqui
 
-  function myFizzBuzz(num) {
-    if (typeof num !== 'number') return false;
-    if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
-    if (num % 3 === 0) return 'fizz';
-    if (num % 5 === 0) return 'buzz';
-    return num;
-  }
-  
-  // implemente seus testes aqui
+describe('Requisito Bonus', () => {
+
+    it('Verifica se a função searchEmployee existe', () => {
+        expect(typeof(searchEmployee)).toBe('function')
+    })
+
+    it('Verifica se retorna erro quando passamos um ID inexistente', () => {
+        expect(() => searchEmployee('12345-6', 'firsName')).toThrow('ID não identificada')
+    })
+
+    it('Verifica se retorna erro quando passamos uma chave inexistente', () => {
+        expect(() => searchEmployee('4456-4', 'colorEyes')).toThrow('Informação indisponível');
+    })
+
+    it('Verifica se retorna Ana quando o id é 8579-6 e a chave é firstName', () => {
+        expect(searchEmployee('8579-6', 'firstName')).toBe('Ana')
+    })
+
+    it('Verifica se retorna Jobs quando o id é 5569-4 e a chave é lastName', () => {
+        expect(searchEmployee('5569-4', 'lastName')).toBe('Jobs')
+    })
+
+    it('Verifica se retorna ["Context API", "RTL", "Bootstrap"] quando o id é 4456-4 e a chave é specialities', () => {
+        expect(searchEmployee('4456-4', 'specialities')).toEqual(["Context API", "RTL", "Bootstrap"])
+    })
+
+    it('Verifica se retorna Paul quando o id é 4678-2 e a chave é firstName', () => {
+        expect(searchEmployee('4678-2', 'firstName')).toBe('Paul')
+    })
+    
+
+    
+
+
+
+})

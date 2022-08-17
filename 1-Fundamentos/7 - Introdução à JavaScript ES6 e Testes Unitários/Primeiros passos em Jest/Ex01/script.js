@@ -31,51 +31,69 @@ function myFizzBuzz(num) {
 
 // Dados
 const professionalBoard = [
-    {
-      id: '8579-6',
-      firstName: 'Ana',
-      lastName: 'Gates',
-      specialities: ['UX', 'Design'],
-    },
-    {
-      id: '5569-4',
-      firstName: 'George',
-      lastName: 'Jobs',
-      specialities: ['Frontend', 'Redux', 'React', 'CSS'],
-    },
-    {
-      id: '4456-4',
-      firstName: 'Leila',
-      lastName: 'Zuckerberg',
-      specialities: ['Context API', 'RTL', 'Bootstrap'],
-    },
-    {
-      id: '1256-4',
-      firstName: 'Linda',
-      lastName: 'Bezos',
-      specialities: ['Hooks', 'Context API', 'Tailwind CSS'],
-    },
-    {
-      id: '9852-2-2',
-      firstName: 'Jeff',
-      lastName: 'Cook',
-      specialities: ['Ruby', 'SQL'],
-    },
-    {
-      id: '4678-2',
-      firstName: 'Paul',
-      lastName: 'Dodds',
-      specialities: ['Backend'],
-    },
-  ];
-  
-  const test = Object.entries(professionalBoard)[0]
-  const obj = test
-  console.log(obj)
-  // Pesquisa
-  const searchEmployee = (id, detail) => {
-    // Implemente seu código aqui
-  };
+  {
+    id: "8579-6",
+    firstName: "Ana",
+    lastName: "Gates",
+    specialities: ["UX", "Design"],
+  },
+  {
+    id: "5569-4",
+    firstName: "George",
+    lastName: "Jobs",
+    specialities: ["Frontend", "Redux", "React", "CSS"],
+  },
+  {
+    id: "4456-4",
+    firstName: "Leila",
+    lastName: "Zuckerberg",
+    specialities: ["Context API", "RTL", "Bootstrap"],
+  },
+  {
+    id: "1256-4",
+    firstName: "Linda",
+    lastName: "Bezos",
+    specialities: ["Hooks", "Context API", "Tailwind CSS"],
+  },
+  {
+    id: "9852-2-2",
+    firstName: "Jeff",
+    lastName: "Cook",
+    specialities: ["Ruby", "SQL"],
+  },
+  {
+    id: "4678-2",
+    firstName: "Paul",
+    lastName: "Dodds",
+    specialities: ["Backend"],
+  },
+];
 
+//   const test = Object.entries(professionalBoard)
+//   const obj = test
+//   console.log(obj)
+// Pesquisa
+const searchEmployee = (id, detail) => {
+ let result = '';
 
-module.exports = { sum, myRemove, myFizzBuzz };
+ for (let index in professionalBoard) {
+    let array = professionalBoard[index]
+
+    if (array.id === id) {
+      result = array
+    }
+ }
+
+ if(!result) {
+  throw new Error('ID não identificada')
+ }
+
+ if(!result[detail]) {
+  throw new Error('Informação indisponível')
+ }
+
+ return result[detail]
+
+}; 
+
+module.exports = { sum, myRemove, myFizzBuzz, searchEmployee };
