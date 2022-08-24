@@ -95,3 +95,9 @@ const string = () => books.reduce((acc, book) => `${acc} ${book.author.name}`, '
 // console.log(ages)
 // console.log(media())
 
+// 🚀 4- Encontre o livro com o maior nome.
+
+const biggerName = () => books.reduce((acc, curr) => curr.name.length > acc.name.length ? curr : acc);
+
+// console.log(biggerName())
+
