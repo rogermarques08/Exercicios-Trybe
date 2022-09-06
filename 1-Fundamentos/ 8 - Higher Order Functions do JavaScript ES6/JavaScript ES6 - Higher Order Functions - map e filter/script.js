@@ -66,7 +66,11 @@ const books = [
 //   🚀 1 - Crie um array com strings no formato NOME_DO_LIVRO - GÊNERO_DO_LIVRO - NOME_DA_PESSOA_AUTORA
 // Dica: Use a função map
 
-const newFormat = books.map((element) => `${element.name} - ${element.genre} - ${element.author.name}`);
+// const newFormat = books.map((element) => `${element.name} - ${element.genre} - ${element.author.name}`);
+
+const text = books.map((element) => `${element.name} - ${element.genre} - ${element.author.name}`)
+
+// console.log(text)
 
 // 🚀 2 - Construa um array de objetos a partir do array de livros. Cada objeto deve conter uma propriedade author, com o nome da pessoa autora do livro, e uma propriedade age com a idade dessa pessoa quando o livro foi lançado. O array deve ser ordenado por idade, ou seja, da pessoa mais jovem para a mais velha considerando suas idades quando o livro foi lançado.
 
@@ -79,19 +83,33 @@ const newObj = books.map((element) => {
 
 // console.log(newObj)
 
+const obj = (objeto) => objeto.map((element) => {
+    return {
+        author: element.author.name,
+        age: element.releaseYear - element.author.birthYear
+    }
+}).sort((a, b) => a.age - b.age)
+
+// console.log(obj(books))
+
+
 
 // 🚀 3 - Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
 // Dica: use a função filter;
 
-const genre = books.filter((element) => element.genre === 'Ficção Científica' || element.genre === 'Fantasia')
+// const genre = books.filter((element) => element.genre === 'Ficção Científica' || element.genre === 'Fantasia')
 
-// console.log(genre)
+const genre = books.filter((element) => element.genre === 'Ficção Científica' || element.age === 'Fantasia')
+
+console.log(genre)
+
+
 
 // 🚀 4 - Crie um array formado pelos livros com mais de 60 anos desde sua publicação. Esse array deve ser ordenado do livro mais velho ao mais novo.
 // Dica: use as funções filter e sort
 
 const more60Years = books.filter((element) => (2022 - element.releaseYear) >= 60)
-.sort((a, b) => a.releaseYear - b.releaseYear);
+    .sort((a, b) => a.releaseYear - b.releaseYear);
 
 // console.log(more60Years)
 
@@ -113,4 +131,4 @@ const oldBooks = more60Years.map((element) => element.name);
 
 const threeLetters = books.filter((element) => element.author.name === 'J. R. R. Tolkien')[0].name
 
-console.log(threeLetters)
+// console.log(threeLetters)
